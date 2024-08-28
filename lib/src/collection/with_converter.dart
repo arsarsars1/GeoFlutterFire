@@ -7,8 +7,7 @@ import 'package:geoflutterfire/src/models/point.dart';
 import 'base.dart';
 
 class GeoFireCollectionWithConverterRef<T> extends BaseGeoFireCollectionRef<T> {
-  GeoFireCollectionWithConverterRef(Query<T> collectionReference)
-      : super(collectionReference);
+  GeoFireCollectionWithConverterRef(super.collectionReference);
 
   Stream<List<DocumentSnapshot<T>>> within({
     required GeoFirePoint center,

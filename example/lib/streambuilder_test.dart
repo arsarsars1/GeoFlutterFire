@@ -4,8 +4,10 @@ import 'package:geoflutterfire/geoflutterfire.dart';
 import 'package:rxdart/rxdart.dart';
 
 class StreamTestWidget extends StatefulWidget {
+  const StreamTestWidget({super.key});
+
   @override
-  _StreamTestWidgetState createState() => _StreamTestWidgetState();
+  State<StreamTestWidget> createState() => _StreamTestWidgetState();
 }
 
 class _StreamTestWidgetState extends State<StreamTestWidget> {
@@ -41,7 +43,7 @@ class _StreamTestWidgetState extends State<StreamTestWidget> {
               if (snapshots.connectionState == ConnectionState.active &&
                   snapshots.hasData) {
                 print('data ${snapshots.data}');
-                return Container(
+                return SizedBox(
                   height: MediaQuery.of(context).size.height * 2 / 3,
                   child: ListView.builder(
                     itemBuilder: (context, index) {
@@ -57,7 +59,9 @@ class _StreamTestWidgetState extends State<StreamTestWidget> {
                         ),
                         subtitle: Text('${point.latitude}, ${point.longitude}'),
                         trailing: Text(
-                            '${data['documentType'] == DocumentChangeType.added ? 'Added' : 'Modified'}'),
+                            data['documentType'] == DocumentChangeType.added
+                                ? 'Added'
+                                : 'Modified'),
                       );
                     },
                     itemCount: snapshots.data!.length,

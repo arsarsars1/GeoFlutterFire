@@ -9,8 +9,7 @@ import 'base.dart';
 
 class GeoFireCollectionRef
     extends BaseGeoFireCollectionRef<Map<String, dynamic>> {
-  GeoFireCollectionRef(Query<Map<String, dynamic>> collectionReference)
-      : super(collectionReference);
+  GeoFireCollectionRef(super.collectionReference);
 
   Stream<List<DocumentSnapshot<Map<String, dynamic>>>> within({
     required GeoFirePoint center,

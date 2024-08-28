@@ -5,13 +5,13 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: '>=2.17.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.4
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -20,8 +20,8 @@ dev_dependencies:
   geoflutterfire:
     path: ../
 
-  cloud_firestore: ^4.8.2
-  google_maps_flutter: ^2.1.1
+  cloud_firestore: ^5.3.0
+  google_maps_flutter: ^2.9.0
 
 flutter:
   uses-material-design: true
