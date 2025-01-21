@@ -20,8 +20,8 @@ dev_dependencies:
   geoflutterfire:
     path: ../
 
-  cloud_firestore: ^4.17.5
-  google_maps_flutter: ^2.9.0
+  cloud_firestore: ^5.6.1
+  google_maps_flutter: ^2.10.0
 
 flutter:
   uses-material-design: true
